@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+     <link type="text/css" rel="stylesheet" href="{% static 'base/base.css' %}"  />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {% block title %}
+      TITLE
+      {% endblock %}
+    </title>
+    {% block head_script %}{% endblock %}
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header">
+    <header>
+      <div>
+      <nav>navbar
+        <a href="{% url 'home' %}">HOME {{ user.is_authenticated }}</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}">PROFILE {{ user.username }}</a>
+        <a href="{% url 'logout' %}">LOGOUT</a>
+        {% else %}
+        <a href="{% url 'login' %}">CONNECT</a>
+        <a href="{% url 'inscription' %}">INSCRIPTION</a>
+        {% endif %}
+      </nav>
+      </div>
+    </header>
+    </div>
+
+
+    <div id="body">
+      <h3>
+      {% block page_title %}
+      {% endblock %}
+      </h3>
+
+      {% block body %}
+      {% endblock %}
+      </div></div>
+    </div>
+    
+
+     
+
+     
+     <footer>
+       <div>
+        {% block footer %}
+        {% endblock %}
+       </div>
+     </footer>
+
+     <script>
+       
+     </script>
+     
+
+  </body>
+</html>

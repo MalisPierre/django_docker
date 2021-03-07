@@ -1,0 +1,32 @@
+{% extends "base/base.html" %} <!--  -->
+
+{% block title %}
+Accueil
+{% endblock %}
+
+
+{% block page_title %}
+Bienvenue sur la page d accueil
+{% endblock %}
+
+{% block body %}
+<div class="col s3 offset-s3">
+<ul>
+	<li>LISTE USER:</li>
+	{% for user in user_query %}
+	<li>{{ user.id }}:{{ user }}</li>
+	{% endfor %}
+</ul>
+</div>
+
+</div>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+
+{% endblock %}

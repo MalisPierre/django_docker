@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object pk="1" model="auth.user">
+    <field type="CharField" name="username">user</field>
+    <field type="CharField" name="password">user</field>
+    <field type="CharField" name="first_name">user</field>
+    <field type="CharField" name="email">user</field>
+  </object>
+  <object pk="2" model="auth.user">
+    <field type="CharField" name="username">admin</field>
+    <field type="CharField" name="password">admin</field>
+    <field type="CharField" name="first_name">admin</field>
+    <field type="CharField" name="email">user</field>
+  </object>
+</django-objects>

@@ -1,0 +1,31 @@
+{% extends "base/base.html" %} <!--  -->
+
+{% block title %}
+Accueil
+{% endblock %}
+
+
+{% block page_title %}
+Bienvenue sur la page d accueil
+{% endblock %}
+
+{% block body %}
+<div class="col s3 offset-s3">
+<ul>
+	<li>username : {{ user.username }}</li>
+	<li>email : {{ user.email }} <a href="{% url 'change_email' %}">Change</a></li>
+	<li>password : ***** <a href="{% url 'change_password' %}">Change</a></li>
+</ul>
+</div>
+
+</div>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+
+{% endblock %}

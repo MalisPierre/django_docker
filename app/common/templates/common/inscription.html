@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+Inscription
+{% endblock %}
+
+{% block page_title %}
+User Inscription
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'inscription' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+  <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

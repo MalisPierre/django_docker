@@ -1,0 +1,26 @@
+{% extends "base/base.html" %}
+
+{% block body %}
+<div class="col s12">
+  <h3>Un avis à émettre ? Merci de remplir ce Formulaire</h3>
+</div>
+<div class="col s6">
+<form action="{% url 'troubleshouting' %}" method="post">
+  {% csrf_token %}
+
+  {% for field in form %}
+  <ul>
+    <div id="form">
+    <li id="form_infos">{{ field.label_tag }}</li>
+    <li id="form_field">{{ field }}</li>
+    </div>
+  </ul>
+  {% endfor %}
+</div>
+<div class="col s8">
+  <input type="submit" value="Submit" />
+</form>
+</div>
+<br/><br/><br/>
+<br/><br/><br/>
+{% endblock %}
