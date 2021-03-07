@@ -4,11 +4,13 @@ django docker exercise
 
 
 
-instal:
+install:
 - have a machine with docker and docker-compose installed
 - run `./build_docker.sh`
 - run `./migration.sh`
 - run `./runserver.sh`
+
+functionnality:
 - go to http://localhost:8000/common/base/home with your prefered web browser
 - create new user clicking the 'INSCRIPTION' button
 - log in using the 'CONNECT' button
